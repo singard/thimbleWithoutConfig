@@ -1,6 +1,8 @@
 utils\commands\CommandArgs.class
 pluginTest\Main.class
 utils\commands\BukkitCommand.class
+pluginTest\SheepListener.class
+pluginTest\listener.class
 utils\commands\Command.class
 utils\commands\ICommand.class
 pluginTest\SpigotBlankPlugin.class
