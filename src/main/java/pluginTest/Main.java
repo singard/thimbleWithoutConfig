@@ -37,7 +37,7 @@ public class Main extends JavaPlugin {
 	        this.framework.registerCommands(new CommandeStartGame());
 	        this.framework.registerCommands(new CommandeYolo());
 
-	        Bukkit.getServer().getConsoleSender().sendMessage("Le plugin s'est bien démarré !");
+	        Bukkit.getServer().getConsoleSender().sendMessage("Le plugin 18 s'est bien démarré !");
 	    }
 
 	    @Override

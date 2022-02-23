@@ -15,11 +15,10 @@ public class CreateListPlayer implements Listener{
         
        Main.playerList.add(event.getPlayer());
        event.setJoinMessage("le joueur, " + event.getPlayer().getName() + " a bien été ajouté à la liste");
-       event.setJoinMessage("joueur présent ");
+       event.setJoinMessage("joueur présent :");
        for (Player player : Main.playerList) {
-    	   event.setJoinMessage(event.getPlayer().getName());
-    	
     	   
+    	   event.setJoinMessage(player.getName()); 
        }
     }
 	

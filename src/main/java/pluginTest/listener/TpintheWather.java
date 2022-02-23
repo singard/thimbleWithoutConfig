@@ -10,6 +10,8 @@ import org.bukkit.event.EventPriority;
 import org.bukkit.event.Listener;
 import org.bukkit.event.player.PlayerMoveEvent;
 
+import pluginTest.commande.CommandeStartGame;
+
 public class TpintheWather implements Listener{
 	
 	@EventHandler (priority = EventPriority.NORMAL)
@@ -23,6 +25,10 @@ public class TpintheWather implements Listener{
             Player player = eventPlayer.getPlayer();
             player.teleport(new Location(Bukkit.getWorld("world"), -158,63,306));
             player.sendTitle("Bien joué :p !", "Attends ton tour.");
+            CommandeStartGame.idJoueur++;
+            CommandeStartGame.tpTopInJump();
+            
+            
         }
     }
 
