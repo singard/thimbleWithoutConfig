@@ -1,4 +1,4 @@
-package pluginTest;
+package pluginTest.listener;
 
 import java.util.Random;
 

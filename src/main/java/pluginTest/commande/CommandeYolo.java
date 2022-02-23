@@ -1,4 +1,4 @@
-package pluginTest;
+package pluginTest.commande;
 
 
 import org.bukkit.Bukkit;
@@ -10,7 +10,7 @@ import utils.commands.Command;
 import utils.commands.CommandArgs;
 import utils.commands.ICommand;
 
-public class SpigotBlankPlugin extends ICommand{
+public class CommandeYolo extends ICommand{
 	
 	 @Override
 	    @Command(name = "yolo")
