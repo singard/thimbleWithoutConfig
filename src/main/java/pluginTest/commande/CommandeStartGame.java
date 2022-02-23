@@ -19,6 +19,7 @@ public class CommandeStartGame extends ICommand {
 		
 		 	Player player = args.getPlayer();
 		 	World world = player.getWorld();
+		 	
 	        PotionEffect PotionEffect  = new PotionEffect(PotionEffectType.WITHER,2000 , 2);
 	        Location locationStart = new Location(world, 241,64,218);
 	        player.teleport(locationStart);
