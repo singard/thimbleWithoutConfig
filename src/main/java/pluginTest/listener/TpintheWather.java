@@ -3,7 +3,6 @@ package pluginTest.listener;
 import org.bukkit.Bukkit;
 import org.bukkit.Location;
 import org.bukkit.Material;
-import org.bukkit.block.Block;
 import org.bukkit.entity.Player;
 import org.bukkit.event.EventHandler;
 import org.bukkit.event.EventPriority;
@@ -19,7 +18,7 @@ public class TpintheWather implements Listener{
 		
         Material material = eventPlayer.getTo().getBlock().getType();
         Player player = eventPlayer.getPlayer();
-        final Location locationJump = new Location(Bukkit.getWorld("world"), -158,92,306);
+        final Location locationJump = new Location(Bukkit.getWorld("world"), -150,92,306);
         
         
         if (material.equals(Material.WATER) || material.equals(Material.STATIONARY_WATER)) {
