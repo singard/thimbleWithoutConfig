@@ -30,7 +30,7 @@ public class TpintheWather implements Listener{
         	player.setFallDistance(0);
         	playerLocation.getBlock().setType(Material.WOOL);
          
-            player.sendTitle("Bien joué V 14 !", "Attends ton tour.");
+            player.sendTitle("Bien joué V 15 !", "Attends ton tour.");
           
             CommandeStartGame.idJoueur++;
             CommandeStartGame.tpTopInJump();
