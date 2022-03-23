@@ -18,18 +18,18 @@ public class TpintheWather implements Listener{
 		
         Material material = eventPlayer.getTo().getBlock().getType();
         Player player = eventPlayer.getPlayer();
-        final Location locationJump = new Location(Bukkit.getWorld("world"), -150,92,306);
+//        final Location locationJump = new Location(Bukkit.getWorld("world"), -150,92,306);
         
         
         if (material.equals(Material.WATER) || material.equals(Material.STATIONARY_WATER)) {
 
         	final Location playerLocation = player.getLocation();
         	playerLocation.setY(playerLocation.getY()-1);
-        	player.teleport(locationJump);
+        	player.teleport(CommandeStartGame.locationHub);
         	player.setFallDistance(0);
         	playerLocation.getBlock().setType(Material.WOOL);
          
-            player.sendTitle("Bien joué V 15 !", "Attends ton tour.");
+            player.sendTitle("Bien joué V 17 !", "Attends ton tour.");
           
             CommandeStartGame.idJoueur++;
             CommandeStartGame.tpTopInJump();

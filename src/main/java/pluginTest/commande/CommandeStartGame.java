@@ -14,15 +14,15 @@ import utils.commands.ICommand;
 
 public class CommandeStartGame extends ICommand {
 public static int idJoueur = 0 ;
+final public static  Location locationHub = new Location(Bukkit.getWorld("world"), -158,63,306);
+final static public Location locationJump = new Location(Bukkit.getWorld("world"), -150,92,306);
 
 	@Override
 	 @Command(name = "start")
 	public void onCommand(CommandArgs args) {
 		
 		for (Player player : Main.playerList) {
-			World world = player.getWorld();
-			Location locationStart = new Location(world, -158,63,306);
-	        player.teleport(locationStart);
+	        player.teleport(locationHub);
 	        Bukkit.getServer().getConsoleSender().sendMessage("la partie peut commencer");
 	        player.sendMessage("go !");
 		}
@@ -36,9 +36,8 @@ public static int idJoueur = 0 ;
 		if (idJoueur < Main.playerList.size()) {
 			Bukkit.getServer().getConsoleSender().sendMessage("la partie peut commencer");
 			Player player = Main.playerList.get(idJoueur);
-			World world = player.getWorld();
-			Location locationStart = new Location(world, -150,84,307);
-			player.teleport(locationStart);
+
+			player.teleport(locationJump);
 		
 		}else {
 			Bukkit.getServer().getConsoleSender().sendMessage("la partie peut commencer");
