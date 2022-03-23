@@ -18,15 +18,15 @@ public class TpintheWather implements Listener{
 	public void onPlayerMove(PlayerMoveEvent eventPlayer) {
 		
         Material material = eventPlayer.getTo().getBlock().getType();
-        Block bloc = eventPlayer.getTo().getBlock();
         Player player = eventPlayer.getPlayer();
+        final Location locationJump = new Location(Bukkit.getWorld("world"), -158,92,306);
         
         
         if (material.equals(Material.WATER) || material.equals(Material.STATIONARY_WATER)) {
 
         	final Location playerLocation = player.getLocation();
         	playerLocation.setY(playerLocation.getY()-1);
-        	player.teleport(new Location(Bukkit.getWorld("world"), -158,92,306));
+        	player.teleport(locationJump);
         	player.setFallDistance(0);
         	playerLocation.getBlock().setType(Material.WOOL);
          
