@@ -3,7 +3,6 @@ package pluginTest.listener;
 import org.bukkit.Bukkit;
 import org.bukkit.Location;
 import org.bukkit.Material;
-import org.bukkit.block.Block;
 import org.bukkit.entity.Player;
 import org.bukkit.event.EventHandler;
 import org.bukkit.event.EventPriority;
@@ -18,13 +17,19 @@ public class TpintheWather implements Listener{
 	public void onPlayerMove(PlayerMoveEvent eventPlayer) {
 		
         Material material = eventPlayer.getTo().getBlock().getType();
-        Block bloc = eventPlayer.getTo().getBlock();
+        Player player = eventPlayer.getPlayer();
+        final Location locationJump = new Location(Bukkit.getWorld("world"), -150,92,306);
+        
         
         if (material.equals(Material.WATER) || material.equals(Material.STATIONARY_WATER)) {
-            bloc.setType(Material.WOOL);
-            Player player = eventPlayer.getPlayer();
-            player.teleport(new Location(Bukkit.getWorld("world"), -158,63,306));
-            player.sendTitle("Bien joué :p !", "Attends ton tour.");
+
+        	final Location playerLocation = player.getLocation();
+        	playerLocation.setY(playerLocation.getY()-1);
+        	player.teleport(locationJump);
+        	player.setFallDistance(0);
+        	playerLocation.getBlock().setType(Material.WOOL);
+         
+            player.sendTitle("Bien joué V 15 !", "Attends ton tour.");
           
             CommandeStartGame.idJoueur++;
             CommandeStartGame.tpTopInJump();
